@@ -34,13 +34,13 @@ export default function Home() {
       <div className="w-full flex items-center md:px-32 px-5 h-screen bg-[url(../../public/assets/home/banner.png))] bg-cover bg-no-repeat">
         <div className="" data-aos="fade-right">
           <h3 className="md:text-2xl">a show case by KKN-PPM UGM</h3>
-          <h1 className="md:text-9xl text-5xl tracking-tighter font-libre text-shadow-lg">
+          <h1 className="md:text-9xl text-5xl tracking-tighter font-libre font-medium text-shadow-lg">
             Seri Bunaken, ‘25
           </h1>
         </div>
       </div>
 
-      <div className="bg-white w-full min-h-screen relative py-16 ">
+      <div className="bg-white w-full min-h-screen relative py-32 ">
         <div className="flex flex-col items-center" data-aos="fade-down">
           <Image
             src={"/assets/home/about-title.svg"}
@@ -64,8 +64,11 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center" data-aos="fade-down">
-          <h2 className="text-[#0313FF] text-5xl font-medium font-libre mt-16">
+        <div
+          className="flex flex-col items-center tracking-tighter"
+          data-aos="fade-down"
+        >
+          <h2 className="text-[#0313FF] text-5xl font-medium font-libre mt-32 tracking-tighter">
             Bunaken in Numbers
           </h2>
           <div className="w-[70%] flex gap-4 my-5  mt-14 ">
@@ -78,11 +81,13 @@ export default function Home() {
                   className="w-full h-full relative"
                   alt="dummy"
                 />
-                <div className="flex flex-col justify-center col-span-2">
-                  <h2 className="text-[#0313FF] font-libre text-2xl">
+                <div className="flex flex-col justify-center col-span-2 ">
+                  <h2 className="text-[#0313FF] font-libre text-2xl  tracking-tighter">
                     {item.name}
                   </h2>
-                  <h2 className="text-black text-3xl font-libre">{item.num}</h2>
+                  <h2 className="text-black text-3xl font-libre tracking-tighter">
+                    {item.num}
+                  </h2>
                 </div>
               </div>
             ))}
@@ -94,7 +99,9 @@ export default function Home() {
         className="bg-[url(../../public/assets/home/overlay-transition.png)] w-full h-52 bg-cover bg-no-repeat flex"
         data-aos="fade"
       >
-        <h1 className="m-auto text-7xl font-libre">KKN-PPM UGM Seri Bunaken</h1>
+        <h1 className="m-auto text-7xl font-libre tracking-tighter">
+          KKN-PPM UGM Seri Bunaken
+        </h1>
       </div>
 
       <div className="bg-white w-full relative py-16 flex flex-col items-center">
