@@ -32,8 +32,8 @@ export default function Footer() {
             <Image
               src={"/assets/sosmed/instagram.svg"}
               alt="instagram"
-              width={30}
-              height={30}
+              width={20}
+              height={20}
             />
           </a>
 
@@ -45,8 +45,8 @@ export default function Footer() {
             <Image
               src={"/assets/sosmed/tiktok.svg"}
               alt="Tiktok"
-              width={30}
-              height={30}
+              width={20}
+              height={20}
             />
           </a>
           <span className="mr-5">@seri.bunaken</span>
@@ -54,8 +54,8 @@ export default function Footer() {
             <Image
               src={"/assets/sosmed/x.svg"}
               alt="x"
-              width={30}
-              height={30}
+              width={20}
+              height={20}
             />
           </a>
           <a
@@ -65,16 +65,16 @@ export default function Footer() {
             <Image
               src={"/assets/sosmed/facebook.svg"}
               alt="facebook"
-              width={30}
-              height={30}
+              width={20}
+              height={20}
             />
           </a>
           <a href="#" className="hover:text-gray-400 flex gap-4">
             <Image
               src={"/assets/sosmed/youtube.svg"}
               alt="Tiktok"
-              width={30}
-              height={30}
+              width={20}
+              height={20}
             />
           </a>
           <span>Seri Bunaken</span>

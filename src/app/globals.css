@@ -8,10 +8,15 @@
 
 @font-face {
   font-family: "LibreCaslonCondensed";
-  src: url("/assets/fonts/LibreCaslon/LibreCaslonCondensed-Regular.otf")
-    format("opentype");
+  src: url("/assets/font/LibreCaslon/LibreCaslonCondensed-Regular.otf")
+      format("opentype"),
+    url("/assets/font/LibreCaslon/LibreCaslonCondensed-Regular.woff2")
+      format("woff2"),
+    url("/assets/font/LibreCaslon/LibreCaslonCondensed-Regular.woff")
+      format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @theme {
@@ -20,7 +25,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-inter: "Inter", sans-serif;
-  --font-libre: "LibreCaslonCondensed", "sans-serif";
+  --font-libre: "LibreCaslonCondensed", serif;
 }
 
 @media (prefers-color-scheme: dark) {
