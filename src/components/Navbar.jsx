@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,12 +27,12 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-16 text-sm font-semibold text-gray-800 py-3">
-          <a href="#" className="hover:text-blue-600">
+          <Link href="/" className="hover:text-blue-600">
             Beranda
-          </a>
-          <a href="#" className="hover:text-blue-600">
+          </Link>
+          <Link href="/galeri" className="hover:text-blue-600">
             Galeri
-          </a>
+          </Link>
           <div className="flex items-center space-x-1 cursor-pointer hover:text-blue-600">
             <span>Kisah Inspiratif</span>
             <ChevronDown size={16} />
@@ -50,12 +51,12 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col space-y-2 text-sm font-semibold text-gray-800">
-          <a href="#" className="hover:text-blue-600">
+          <Link href="/" className="hover:text-blue-600">
             Beranda
-          </a>
-          <a href="#" className="hover:text-blue-600">
+          </Link>
+          <Link href="/galeri" className="hover:text-blue-600">
             Galeri
-          </a>
+          </Link>
           <div className="flex items-center space-x-1 cursor-pointer hover:text-blue-600">
             <span>Kisah Inspiratif</span>
             <ChevronDown size={16} />
