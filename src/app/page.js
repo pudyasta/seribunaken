@@ -48,10 +48,19 @@ export default function Home() {
             height={1080}
           />
           <p className="text-[#0313FF] text-base md:text-xl max-w-7xl text-center">
-            “This collection is a tribute to the spirit of service — the ones
-            who bring creativity, unity, and passion to our KKN PPM UGM journey.
-            It’s a celebration of togetherness, collaboration, and making a
-            difference in the community.”
+            Bunaken adalah surga bahari yang terletak di utara Pulau Sulawesi,
+            Indonesia. Dikenal sebagai salah satu lokasi menyelam terbaik di
+            dunia, Bunaken menawarkan keindahan bawah laut yang luar biasa,
+            dengan lebih dari 390 spesies terumbu karang dan beragam jenis ikan
+            tropis. Air lautnya yang jernih, dinding karang yang curam, serta
+            kehidupan laut yang kaya menjadikan Bunaken destinasi impian para
+            penyelam dan pecinta alam. Selain keindahan bawah lautnya, Bunaken
+            juga menawarkan pesona budaya lokal dari masyarakat pesisir yang
+            ramah dan masih menjaga tradisi. Pulau ini mudah diakses dari Kota
+            Manado, dengan perjalanan laut sekitar 45 menit menggunakan kapal.
+            Bunaken bukan hanya tempat wisata, tetapi juga kawasan konservasi
+            penting yang menunjukkan harmoni antara manusia dan alam. Kunjungan
+            Anda turut mendukung pelestarian ekosistem laut yang berharga ini.
           </p>
         </div>
 
@@ -60,11 +69,13 @@ export default function Home() {
           <h2 className="text-[#0313FF] text-3xl md:text-5xl font-medium font-libre mt-24 text-center">
             Bunaken in Numbers
           </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-14 w-full md:max-w-7xl px-4 justify-items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-14 w-full md:max-w-7xl px-4 justify-items-center">
             {numbers.map((item, index) => (
-              <div key={index} className="flex items-center gap-4">
-                <div className="w-16 h-16 md:w-24 md:h-24 relative">
+              <div
+                key={index}
+                className="flex items-center gap-4 md:flex-row flex-col items-cen"
+              >
+                <div className="w-16 h-16 md:w-24 md:h-24 relative  ">
                   <Image
                     src="/assets/home/dummy-numbers.svg"
                     fill
@@ -72,7 +83,7 @@ export default function Home() {
                     alt="icon"
                   />
                 </div>
-                <div>
+                <div className="text-center md:text-left">
                   <h3 className="text-[#0313FF] font-libre text-lg md:text-2xl">
                     {item.name}
                   </h3>
