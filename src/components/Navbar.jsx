@@ -36,7 +36,7 @@ export default function Navbar() {
           </Link>
 
           {/* Kisah Inspiratif Dropdown (desktop hover) */}
-          {/* <div className="relative group cursor-pointer">
+          <div className="relative group cursor-pointer">
             <div className="flex items-center space-x-1 hover:text-blue-600">
               <span>Kisah Inspiratif</span>
               <ChevronDown size={16} />
@@ -44,14 +44,11 @@ export default function Navbar() {
             <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition duration-200 z-50">
               <ul className="py-2 text-sm text-gray-700">
                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                  Cerita Mahasiswa
-                </li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                  Cerita Masyarakat
+                  <Link href="/kisah/zine-nelayan">Zine Nelayan</Link>
                 </li>
               </ul>
             </div>
-          </div> */}
+          </div>
 
           {/* Fasilitas Dropdown (desktop hover) */}
           <div className="relative group cursor-pointer">
@@ -90,7 +87,7 @@ export default function Navbar() {
           </Link>
 
           {/* Kisah Inspiratif Dropdown (mobile click) */}
-          {/* <div className="relative">
+          <div className="relative">
             <button
               onClick={() => setShowDropdownKisah(!showDropdownKisah)}
               className="flex items-center space-x-1 hover:text-blue-600"
@@ -100,20 +97,17 @@ export default function Navbar() {
             </button>
             {showDropdownKisah && (
               <div
-                className="mt-2 bg-white rounded-md  w-full transform transition-all duration-300 origin-top scale-y-100 opacity-100"
+                className="mt-2 bg-white rounded-md w-full transform transition-all duration-300 origin-top scale-y-100 opacity-100"
                 style={{ animation: "dropdownFade 0.3s ease-out" }}
               >
                 <ul className="py-2 text-sm text-gray-700">
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    Cerita Mahasiswa
-                  </li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                    Cerita Masyarakat
+                    <Link href="/kisah/zine-nelayan">Zine Nelayan</Link>
                   </li>
                 </ul>
               </div>
             )}
-          </div> */}
+          </div>
 
           {/* Fasilitas Dropdown (mobile click) */}
           <div className="relative">
@@ -126,7 +120,7 @@ export default function Navbar() {
             </button>
             {showDropdownFasilitas && (
               <div
-                className="mt-2 bg-white rounded-md  w-full transform transition-all duration-300 origin-top scale-y-100 opacity-100"
+                className="mt-2 bg-white rounded-md w-full transform transition-all duration-300 origin-top scale-y-100 opacity-100"
                 style={{ animation: "dropdownFade 0.3s ease-out" }}
               >
                 <ul className="py-2 text-sm text-gray-700">
