@@ -66,9 +66,9 @@ const breakpointColumnsObj = {
 export default function page() {
   return (
     <div className="py-20 px-4 bg-white">
-      <h2 className="text-4xl font-bold text-center text-blue-700 mb-10 mt-20 font-libre ">
+      <h1 className="md:text-[64px] text-[40px] tracking-tighter font-libre font-medium text-bluecustom text-[#0313FF] mt-12 text-center mb-10">
         Stories Captured
-      </h2>
+      </h1>
 
       <Masonry
         breakpointCols={breakpointColumnsObj}

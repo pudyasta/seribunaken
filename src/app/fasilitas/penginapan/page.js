@@ -169,7 +169,7 @@ const FasilitasPage = () => {
       <div className="container mx-auto">
         <div className="w-full flex justify-center items-center px-5 h-[60vh] bg-white relative">
           <div className="w-full text-center" data-aos="fade-right">
-            <h1 className="md:text-[64px] text-[40px] tracking-tighter font-libre font-medium text-bluecustom text-[#0313FF]">
+            <h1 className="md:text-[64px] text-[40px] tracking-tighter font-libre font-medium text-bluecustom text-[#0313FF] mt-12 text-center mb-10">
               Temukan Fasilitas yang <br /> Tersedia di Bunaken
             </h1>
           </div>
