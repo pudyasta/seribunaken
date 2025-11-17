@@ -1,7 +1,19 @@
 "use client";
+import FsLightbox from "fslightbox-react";
 import Image from "next/image";
-import React from "react";
-import Masonry from "react-masonry-css";
+import React, { useState } from "react";
+// import Masonry from "react-masonry-css";
+import dynamic from "next/dynamic";
+
+const ResponsiveMasonry = dynamic(
+  () => import("react-responsive-masonry").then((mod) => mod.ResponsiveMasonry),
+  { ssr: false }
+);
+
+const Masonry = dynamic(
+  () => import("react-responsive-masonry").then((mod) => mod.default),
+  { ssr: false }
+);
 
 const images = [
   "/assets/galeri/bunaken (1).png",
@@ -64,29 +76,41 @@ const breakpointColumnsObj = {
 };
 
 export default function page() {
+  const [toggler, setToggler] = useState(false);
+  const [productIndex, setProductIndex] = useState(0);
   return (
-    <div className="py-20 px-4 bg-white">
+    <div className="pb-20 pt-32 px-4 md:px-20 bg-white">
       <h1 className="md:text-[64px] text-[40px] tracking-tighter font-libre font-medium text-bluecustom text-[#0313FF] mt-12 text-center mb-10">
         Stories Captured
       </h1>
 
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="flex gap-5"
-        columnClassName="space-y-5"
+      <ResponsiveMasonry
+        columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 5 }}
+        gutterBreakpoints={{ 350: "12px", 750: "16px", 900: "24px" }}
       >
-        {images.map((src, index) => (
-          <div key={index} className="overflow-hidden rounded-lg shadow-md">
-            <Image
-              src={src}
-              alt={`Image ${index + 1}`}
-              width={500}
-              height={300}
-              className="w-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out"
-            />
-          </div>
-        ))}
-      </Masonry>
+        <Masonry>
+          {images.map((src, index) => (
+            <div key={index} className="overflow-hidden rounded-lg shadow-md">
+              <Image
+                src={src}
+                alt={`Image ${index + 1}`}
+                width={500}
+                height={300}
+                className="w-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out hover:cursor-pointer"
+                onClick={() => {
+                  setProductIndex(index);
+                  setToggler(!toggler);
+                }}
+              />
+            </div>
+          ))}
+          <FsLightbox
+            toggler={toggler}
+            sources={images}
+            sourceIndex={productIndex + 1}
+          />
+        </Masonry>
+      </ResponsiveMasonry>
     </div>
   );
 }

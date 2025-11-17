@@ -46,11 +46,11 @@ export default function Navbar() {
                 <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                   <Link href="/kisah/zine-nelayan">Zine Nelayan</Link>
                 </li>
-                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                {/* <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                   <Link href="/kisah/dokumenter-nelayan">
                     Dokumenter Perjalanan Nelayan
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -109,11 +109,11 @@ export default function Navbar() {
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                     <Link href="/kisah/zine-nelayan">Zine Nelayan</Link>
                   </li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  {/* <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                     <Link href="/kisah/dokumenter-nelayan">
                       Dokumenter Perjalanan Nelayan
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             )}

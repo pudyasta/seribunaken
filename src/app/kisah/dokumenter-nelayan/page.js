@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="py-20 px-4 bg-white">
+    <div className="pb-20 pt-32 px-4 md:px-20 bg-white">
       <h1 className="md:text-[64px] text-[40px] tracking-tighter font-libre font-medium text-bluecustom text-[#0313FF] mt-12 text-center mb-10">
         Video Dokumenter Perjalanan Nelayan
       </h1>
