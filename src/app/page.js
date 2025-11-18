@@ -19,14 +19,32 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <div className="w-full flex items-center lg:px-32 md:px-16 px-5 h-screen bg-[url('/assets/home/banner.png')] bg-cover bg-no-repeat">
-        <div data-aos="fade-right">
-          <h3 className="md:text-2xl text-xl text-white">
-            a showcase by KKN-PPM UGM
-          </h3>
-          <h1 className="xl:text-9xl md:text-8xl text-5xl tracking-tighter font-libre font-medium text-shadow-lg text-white">
-            Seri Bunaken, ‘25
-          </h1>
+      <div className="relative w-full h-screen overflow-hidden ">
+        {/* Background Video */}
+        <video
+          className=" top-0 left-0 w-full h-full object-cover fixed -z-40"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        >
+          <source src="/assets/home/hero.mp4" type="video/mp4" />
+        </video>
+
+        {/* Overlay (optional, for contrast) */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* Content */}
+        <div className="relative flex items-center justify-center w-full lg:px-32 md:px-16 px-5 h-full ">
+          <div data-aos="fade-in" data-aos-duration="2000">
+            <h3 className="md:text-2xl text-xl text-white text-center">
+              a showcase by KKN-PPM UGM
+            </h3>
+            <h1 className="xl:text-9xl md:text-8xl text-5xl tracking-tighter font-libre font-medium text-shadow-lg text-white">
+              Seri Bunaken, ‘25
+            </h1>
+          </div>
         </div>
       </div>
 
@@ -121,6 +139,25 @@ export default function Home() {
           menunjukkan manfaat luar biasa besar dalam memberdayakan masyarakat
           dalam kerangka pembangunan Negara Kesatuan Republik Indonesia.
         </p>
+      </div>
+
+      {/* Activities Recap Section */}
+      <div className="bg-white w-full py-24 px-5 flex flex-col items-center">
+        <h2 className="text-[#0313FF] text-3xl md:text-5xl font-medium font-libre text-center mb-10">
+          Activities Recap
+        </h2>
+
+        {/* Responsive YouTube Wrapper */}
+        <div className="w-full md:w-3/4 aspect-video rounded-2xl overflow-hidden shadow-lg">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/hlQ0xwXNFLw?si=NU8SbbiSX-v1lXfH"
+            title="Activities Recap"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
     </>
   );
